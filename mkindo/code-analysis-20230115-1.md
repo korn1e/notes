@@ -48,8 +48,13 @@ ahmgabst002TableAssignmentEdit: function (event, id, bunused) {
 ```
 
 Ajax call is asynchronous, even though using `async: false`(deprecated), and it may not work.  
+This will result incorrect REST calls ("null" path):  
+`/ahmgabst-aws/rest/bst002/get-listitem-po/null?_=1673775271626`  
+`/ahmgabst-aws/rest/bst002/get-nomorpoByID/null?_=1673775271625`  
+
 Try to promisify the ajax call and use `async` `await` to call them.  
-Try following when declaring object (without quotes on field name):
+
+In addition, use following when declaring object (without quotes on field name):
 ```javascript
 var obj = {
     asgmntData: asgmntData,
