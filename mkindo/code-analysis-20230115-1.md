@@ -47,7 +47,7 @@ ahmgabst002TableAssignmentEdit: function (event, id, bunused) {
 }
 ```
 
-Ajax call is asynchronous, even though using `async: false`(deprecated), and it may not work.  
+Ajax call is asynchronous, even though `async: false`(deprecated) is used, it may not work.  
 This will result incorrect REST calls ("null" path):  
 `/ahmgabst-aws/rest/bst002/get-listitem-po/null?_=1673775271626`  
 `/ahmgabst-aws/rest/bst002/get-nomorpoByID/null?_=1673775271625`  
